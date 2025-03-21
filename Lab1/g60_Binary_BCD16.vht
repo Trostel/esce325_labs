@@ -25,7 +25,8 @@
 -- 
 
 LIBRARY ieee;                                               
-USE ieee.std_logic_1164.all;                                
+USE ieee.std_logic_1164.all; 
+USE ieee.numeric_std.all;                    
 
 ENTITY g60_Binary_BCD16_vhd_tst IS
 END g60_Binary_BCD16_vhd_tst;
@@ -68,15 +69,15 @@ END PROCESS init;
 always : PROCESS                                              
 -- optional sensitivity list                                  
 -- (        )                                                 
--- variable declarations                                      
+-- variable declarations
+variable bin_var : unsigned (15 downto 0) := (others => '0');                                      
 BEGIN                                                         
         -- code executes for every event on sensitivity list
-		bin <= "0000000000000000";
-		wait for 10 ns;
-		bin <= "1111111111111111";
-		WAIT FOR 5 ns;
-		bin <= "1110011001010011";
-		wait for 10 ns;
+	stimuli_generation : for k in 0 to 32 loop
+		bin <= std_logic_vector(bin_var);
+		bin_var := to_unsigned((2048*k), 16);
+		wait for 5 ns;
+	end loop stimuli_generation;
 wait;
 		
 END PROCESS always;                                          
