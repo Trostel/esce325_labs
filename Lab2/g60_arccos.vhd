@@ -2,16 +2,16 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity arccos_calculator is
+entity g60_arccos is
 	port (
 		clk 	: in std_logic;
 		reset : in std_logic;
 		X 		: in std_logic_vector(7 downto 0);
 		ANGLE : out std_logic_vector(9 downto 0)
 	);
-end arccos_calculator;
+end g60_arccos;
 
-architecture rtl of arccos_calculator is
+architecture rtl of g60_arccos is
 	signal X_i 	: SIGNED (7 downto 0);
 	signal X2 	: SIGNED (15 downto 0);
 	signal P1 	: SIGNED (6 downto 0);
