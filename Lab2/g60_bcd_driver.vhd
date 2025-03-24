@@ -84,7 +84,7 @@ begin
 	
 	hex1_display : g60_7_segment_decoder
 	port map (
-		BCD => BCD1_int,
+		BCD => BCD2_int,
 		RB_in => ripple_banking(0),
 		RB_out => open,
 		segments => HEX1
@@ -92,7 +92,7 @@ begin
 	
 	hex2_display : g60_7_segment_decoder
 	port map (
-		BCD => BCD1_int,
+		BCD => BCD3_int,
 		RB_in => ripple_banking(1),
 		RB_out => ripple_banking(0),
 		segments => HEX2
@@ -100,7 +100,7 @@ begin
 	
 	hex3_display : g60_7_segment_decoder
 	port map (
-		BCD => BCD1_int,
+		BCD => BCD4_int,
 		RB_in => ripple_banking(2),
 		RB_out => ripple_banking(1),
 		segments => HEX3
@@ -109,7 +109,7 @@ begin
 	-- leftmost hex display
 	hex4_display : g60_7_segment_decoder
 	port map (
-		BCD => BCD1_int,
+		BCD => BCD5_int,
 		RB_in => '1',
 		RB_out => ripple_banking(2),
 		segments => HEX4
