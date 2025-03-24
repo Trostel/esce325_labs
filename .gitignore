@@ -1,7 +1,8 @@
 Lab2/db/*
+Lab2/atom_netlists/*
 Lab2/incremental_db/*
-Lab2/output_files/*[!.sof]
-Lab2/simulation/*[!.vht]
+Lab2/output_files/*
+Lab2/simulation/modelsim/*
 *.qpf
 *.qsf
 *.qws
