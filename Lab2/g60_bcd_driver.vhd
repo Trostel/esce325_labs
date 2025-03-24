@@ -18,7 +18,6 @@ architecture rtl of g60_bcd_driver is
 
 	signal internal_angle : std_logic_vector(15 downto 0);
 	signal BCD1_int, BCD2_int, BCD3_int, BCD4_int, BCD5_int : std_logic_vector(3 downto 0);
-	signal HEX0_int, HEX1_int, HEX2_int, HEX3_int, HEX4_int : std_logic_vector(6 downto 0);
 	signal ripple_banking : std_logic_vector(2 downto 0); -- propagate blanking b/wn 4 hex displays
 	
 	component g60_arccos is
@@ -80,7 +79,7 @@ begin
 		BCD => BCD1_int,
 		RB_in => '0',
 		RB_out => open,
-		segments => HEX0_int
+		segments => HEX0
 	);
 	
 	hex1_display : g60_7_segment_decoder
@@ -88,7 +87,7 @@ begin
 		BCD => BCD1_int,
 		RB_in => ripple_banking(0),
 		RB_out => open,
-		segments => HEX1_int
+		segments => HEX1
 	);
 	
 	hex2_display : g60_7_segment_decoder
@@ -96,7 +95,7 @@ begin
 		BCD => BCD1_int,
 		RB_in => ripple_banking(1),
 		RB_out => ripple_banking(0),
-		segments => HEX2_int
+		segments => HEX2
 	);
 	
 	hex3_display : g60_7_segment_decoder
@@ -104,7 +103,7 @@ begin
 		BCD => BCD1_int,
 		RB_in => ripple_banking(2),
 		RB_out => ripple_banking(1),
-		segments => HEX3_int
+		segments => HEX3
 	);
 	
 	-- leftmost hex display
@@ -113,7 +112,7 @@ begin
 		BCD => BCD1_int,
 		RB_in => '1',
 		RB_out => ripple_banking(2),
-		segments => HEX4_int
+		segments => HEX4
 	);
 	
 
