@@ -75,7 +75,7 @@ stimulus_generation : PROCESS
 BEGIN                                                         
 	finished <= '0';
 	reset <= '0';
-	SW <= "10000000";
+	SW <= "00111111";
 	wait for 25 ns;
 	
 	wait for 100 ns;

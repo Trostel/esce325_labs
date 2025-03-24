@@ -5,8 +5,8 @@
 
 ![Layout](./zoomed_chip_layout.png)
 
-# Utilization
- - Logic utilization (in ALMs): 5/32,070 (< 1%)
+# Utilization g60_arccos
+ - Logic utilization (in ALMs): 6/32,070 (< 1%)
  - Total registers: 10  
  - Total pins: 20/457 (4%)
  - Total DSP blocks: 4/87 (5%)
