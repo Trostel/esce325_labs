@@ -18,22 +18,22 @@
 All slack values are end point total slack times.
 
 ## Requested Fmax = 250 MHz | T_ck = 4 ns   
-  - Fast 1100 mV 0C  Model **Hold slack** = +0.900 ns  
-  - Slow 1100 mV 85C Model **Setup slack** = -14.937 ns  
-  - Slow 1100 mV 85C Model **End Points TNS** = -146.934 ns  
-  - Slow 1100 mV 85C Model **Fmax** = 51.59 MHz  
+  - Fast 1100 mV 0C  Model **Hold slack** = +0.896 ns  
+  - Slow 1100 mV 85C Model **Setup slack** = -13.537 ns  
+  - Slow 1100 mV 85C Model **End Points TNS** = -146.375 ns  
+  - Slow 1100 mV 85C Model **Fmax** = 57.02 MHz  
 
 ![Top Failing Paths](./pictures/4ns_tck_top_failing_paths.png)
 
 ## Requested Fmax = 125 MHz | T_ck = 8 ns  
-  - Fast 1100 mV 0C  Model **Hold slack** = +0.899 ns  
-  - Slow 1100 mV 85C Model **Setup slack** = -10.722 ns  
-  - Slow 1100 mV 85C Model **End Points TNS** = -104.966 ns  
-  - Slow 1100 mV 85C Model **Fmax** = 53.41 MHz
+  - Fast 1100 mV 0C  Model **Hold slack** = +0.898 ns  
+  - Slow 1100 mV 85C Model **Setup slack** = -9.130 ns  
+  - Slow 1100 mV 85C Model **End Points TNS** = -106.802 ns  
+  - Slow 1100 mV 85C Model **Fmax** = 58.38 MHz
 
 ![Top Failing Paths](./pictures/8ns_tck_top_failing_paths.png)
 
 ## Requested Fmax = 50 MHz | T_ck = 20 ns
-  - Fast 1100 mV 0C  Model **Hold slack** = +0.899 ns    
-  - Slow 1100 mV 85C Model **Setup slack** = +1.301 ns  
-  - Slow 1100 mV 85C Model **Fmax** = 53.48 MHz
+  - Fast 1100 mV 0C  Model **Hold slack** = +0.820 ns    
+  - Slow 1100 mV 85C Model **Setup slack** = +2.050 ns  
+  - Slow 1100 mV 85C Model **Fmax** = 55.71 MHz
