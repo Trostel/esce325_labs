@@ -1,9 +1,12 @@
 # Generated Design
-![Post-Fitting Netlist](./post_fitting_netlist.png)
+## Netlist post-fitting
+![Post-Fitting Netlist](./post_fitting_netlist.png)  
 
-![RTL](./rtl.png)
+## RTL
+![RTL](./rtl.png)  
 
-![Layout](./zoomed_chip_layout.png)
+## On-Chip layout
+![Layout](./zoomed_chip_layout.png)  
 
 # Utilization g60_arccos
  - Logic utilization (in ALMs): 6/32,070 (< 1%)
