@@ -1,11 +1,33 @@
-# Requested Fmax = 250 MHz | T_ck = 4 ns  
-  - Fast 1100 mV 0C  Model **Hold slack** =  
-  - Slow 1100 mV 85C Model **Setup slack** =  
-  - Slow 1100 mV 85C Model **Fmax** =  
+# Timing Analysis
+All slack values are end point total slack times.
 
-# Requested Fmax = 125 MHz | T_ck = 8 ns  
-  - Fast 1100 mV 0C  Model **Hold slack** = 
-  - Slow 1100 mV 85C Model **Setup slack** =  
-  - Slow 1100 mV 85C Model **Fmax** = 
+![Post-Fitting Netlist](./post_fitting_netlist.png)
 
-# Incremented Fmax ...
+![RTL](./rtl.png)
+
+## Requested Fmax = 250 MHz | T_ck = 4 ns   
+  - Fast 1100 mV 0C  Model **Hold slack** = +0.900 ns  
+  - Slow 1100 mV 85C Model **Setup slack** = -14.937 ns  
+  - Slow 1100 mV 85C Model **End Points TNS** = -146.934 ns  
+  - Slow 1100 mV 85C Model **Fmax** = 51.59 MHz  
+
+![Top Failing Paths](./4ns_tck_top_failing_paths.png)
+
+## Requested Fmax = 125 MHz | T_ck = 8 ns  
+  - Fast 1100 mV 0C  Model **Hold slack** = +0.899 ns  
+  - Slow 1100 mV 85C Model **Setup slack** = -10.722 ns  
+  - Slow 1100 mV 85C Model **End Points TNS** = -104.966 ns  
+  - Slow 1100 mV 85C Model **Fmax** = 53.41 MHz
+
+![Top Failing Paths](./8ns_tck_top_failing_paths.png)
+
+## Requested Fmax = 50 MHz | T_ck = 20 ns
+  - Fast 1100 mV 0C  Model **Hold slack** = +0.899 ns    
+  - Slow 1100 mV 85C Model **Setup slack** = +1.301 ns  
+  - Slow 1100 mV 85C Model **Fmax** = 53.48 MHz
+
+# Utilization
+ - Logic utilization (in ALMs): 5/32,070 (< 1%)
+ - Total registers: 10  
+ - Total pins: 20/457 (4%)
+ - Total DSP blocks: 4/87 (5%)
