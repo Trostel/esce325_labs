@@ -46,7 +46,7 @@ begin
 		-- Ripple blank check
 		if ((RB_in = '1') and (BCD = "0000")) then
 			RB_Out <= '1';
-			segments_int <= (others => '1');
+			segments_int <= (others => '0');
 		else
 			RB_Out <= '0';
 			case BCD is
@@ -81,7 +81,7 @@ begin
 					segments_int <= "1101111";
 				
 				when others =>
-					segments_int <= (others => '1');
+					segments_int <= (others => '0');
 				end case;
 		end if;
 	
