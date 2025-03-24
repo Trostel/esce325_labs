@@ -11,7 +11,7 @@ entity g60_7_segment_decoder is
 end g60_7_segment_decoder;
 
 architecture rtl of g60_7_segment_decoder is
-
+	signal segments_int : std_logic_vector(6 downto 0);
 begin
 	-- BCD 8421 encoding
 	-- 0 | 0b0000
@@ -38,49 +38,50 @@ begin
 	-- HEX_7, 0x07, 0b0000111
 	-- HEX_8, 0x7F, 0b1111111
 	-- HEX_9, 0x6F, 0b1101111
-	
+	-- need to invert the above mappings...
+	segments <= not segments_int;
 	
 	decode : process (BCD, RB_in)
 	begin
 		-- Ripple blank check
 		if ((RB_in = '1') and (BCD = "0000")) then
 			RB_Out <= '1';
-			segments <= (others => '0');
+			segments_int <= (others => '1');
 		else
 			RB_Out <= '0';
 			case BCD is
 				when "0000" => -- 0
-					segments <= "0111111";
+					segments_int <= "0111111";
 					
 				when "0001" => -- 1
-					segments <= "0000110";
+					segments_int <= "0000110";
 					
 				when "0010" => -- 2
-					segments <= "1011011";
+					segments_int <= "1011011";
 					
 				when "0011" => -- 3
-					segments <= "1001111";
+					segments_int <= "1001111";
 					
 				when "0100" => -- 4
-					segments <= "1100110";
+					segments_int <= "1100110";
 					
 				when "0101" => -- 5
-					segments <= "1101101";
+					segments_int <= "1101101";
 		
 				when "0110" => -- 6
-					segments <= "1111101";
+					segments_int <= "1111101";
 					
 				when "0111" => -- 7
-					segments <= "0000111";
+					segments_int <= "0000111";
 					
 				when "1000" => -- 8
-					segments <= "1111111";
+					segments_int <= "1111111";
 				
 				when "1001" => -- 9
-					segments <= "1101111";
+					segments_int <= "1101111";
 				
 				when others =>
-					segments <= (others => '0');
+					segments_int <= (others => '1');
 				end case;
 		end if;
 	
