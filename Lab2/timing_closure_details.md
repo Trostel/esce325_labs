@@ -1,9 +1,18 @@
-# Timing Analysis
-All slack values are end point total slack times.
-
+# Generated Design
 ![Post-Fitting Netlist](./post_fitting_netlist.png)
 
 ![RTL](./rtl.png)
+
+![Layout](./zoomed_chip_layout.png)
+
+# Utilization
+ - Logic utilization (in ALMs): 5/32,070 (< 1%)
+ - Total registers: 10  
+ - Total pins: 20/457 (4%)
+ - Total DSP blocks: 4/87 (5%)
+
+# Timing Analysis
+All slack values are end point total slack times.
 
 ## Requested Fmax = 250 MHz | T_ck = 4 ns   
   - Fast 1100 mV 0C  Model **Hold slack** = +0.900 ns  
@@ -25,9 +34,3 @@ All slack values are end point total slack times.
   - Fast 1100 mV 0C  Model **Hold slack** = +0.899 ns    
   - Slow 1100 mV 85C Model **Setup slack** = +1.301 ns  
   - Slow 1100 mV 85C Model **Fmax** = 53.48 MHz
-
-# Utilization
- - Logic utilization (in ALMs): 5/32,070 (< 1%)
- - Total registers: 10  
- - Total pins: 20/457 (4%)
- - Total DSP blocks: 4/87 (5%)
